@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import { validColors } from "@/colors/validColors";
+import Stack from "@mui/material/Stack";
+import CircularProgress from "@mui/material/CircularProgress";
 
 type House = {
   name: string;
@@ -37,7 +39,11 @@ const Houses = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <Stack sx={{ color: "grey.500" }} spacing={2} direction="row">
+        <CircularProgress color="inherit" size="10rem" />
+      </Stack>
+    );
   }
 
   if (error) {
