@@ -56,11 +56,11 @@ const Houses = () => {
         {houses.map((house) => (
           <div
             key={house.id}
-            className="rounded-lg w-[420px] border-2 border-[#e3e3e3] mb-8 h-full shadow-md"
+            className="rounded-lg md:w-[420px] border-2 border-[#e3e3e3] mb-8 h-full shadow-md"
           >
             <div className="flex justify-between px-4 pt-3 pb-3">
               <h2 className="text-[22px] font-black">{house.name}</h2>
-              <p className="text-[14px] font-semibold pt-1"> {house.animal}</p>
+              <p className="text-[14px]  pt-1 px-2"> {house.animal}</p>
             </div>
 
             {validColors.includes(
@@ -70,7 +70,7 @@ const Houses = () => {
               house.houseColours.split(" ")[2].toLowerCase()
             ) ? (
               <div
-                className="mx-4 mb-4 rounded"
+                className="mx-3 mb-4 rounded"
                 style={{
                   backgroundImage: `linear-gradient(to right, ${house.houseColours
                     .split(" ")[0]
@@ -83,16 +83,16 @@ const Houses = () => {
               ></div>
             ) : (
               <div
-                className="mx-1 mb-4 rounded"
+                className="mx-3 mb-4 rounded"
                 style={{
                   backgroundImage: `linear-gradient(to right, white, black`,
-                  width: "95%",
+                  width: "92%",
                   height: "20px",
                 }}
               ></div>
             )}
 
-            <div className="flex px-4 pt-2 pb-4">
+            <div className="flex px-4 pt-1 pb-4">
               <p>Founder: </p>
               <p className="font-bold ml-2"> {house.founder}</p>
             </div>
