@@ -2,8 +2,16 @@
 import { useEffect, useState } from "react";
 import { validColors } from "@/colors/validColors";
 
+type House = {
+  name: string;
+  animal: string;
+  id: string;
+  houseColours: string;
+  founder: string;
+};
+
 const Houses = () => {
-  const [houses, setHouses] = useState([]);
+  const [houses, setHouses] = useState<House[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -19,7 +27,7 @@ const Houses = () => {
         const data = await response.json();
         setHouses(data);
         setLoading(false);
-      } catch (error) {
+      } catch (error: any) {
         console.error("Error fetching data:", error);
         setError(error.message);
       }
@@ -82,7 +90,6 @@ const Houses = () => {
               <p>Founder: </p>
               <p className="font-bold ml-2"> {house.founder}</p>
             </div>
-            {/* Add more details as needed */}
           </div>
         ))}
       </ul>
