@@ -4,20 +4,21 @@
 
 @font-face {
   font-family: "verdana";
-  src: url("/assets/verdana-font-family/verdana.ttf");
+  src: url("/fonts/verdana-font-family/verdana.ttf");
   font-weight: normal;
   font-style: normal;
 }
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  display: flex;
-  justify-content: center;
+
+  font-family: "verdana", sans-serif; /* Provide fallback font */
 }
 
 body {
-  font-family: "verdana", sans-serif;
+  font-family: "verdana", sans-serif; /* Provide fallback font */
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,12 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
+import { validColors } from "@/colors/validColors";
 
 const Houses = () => {
   const [houses, setHouses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  const validColors = ["yellow", "black", "green", "silver"];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,15 +42,18 @@ const Houses = () => {
         {houses.map((house) => (
           <div
             key={house.id}
-            className="rounded-lg w-[420px] border border-gray-200 mb-8 h-full shadow-md"
+            className="rounded-lg w-[420px] border-2 border-[#e3e3e3] mb-8 h-full shadow-md"
           >
-            <div className="flex justify-between px-5 pt-3 pb-3">
-              <h2 className="text-[22px] font-bold">{house.name}</h2>
-              <p className="text-[14px]"> {house.animal}</p>
+            <div className="flex justify-between px-4 pt-3 pb-3">
+              <h2 className="text-[22px] font-black">{house.name}</h2>
+              <p className="text-[14px] font-semibold pt-1"> {house.animal}</p>
             </div>
 
             {validColors.includes(
               house.houseColours.split(" ")[0].toLowerCase()
+            ) &&
+            validColors.includes(
+              house.houseColours.split(" ")[2].toLowerCase()
             ) ? (
               <div
                 className="mx-4 mb-4 rounded"
@@ -76,7 +78,7 @@ const Houses = () => {
               ></div>
             )}
 
-            <div className="flex px-3 pt-2 pb-4">
+            <div className="flex px-4 pt-2 pb-4">
               <p>Founder: </p>
               <p className="font-bold ml-2"> {house.founder}</p>
             </div>
