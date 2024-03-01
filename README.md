@@ -9,7 +9,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:chris-diam/wizard-world.git
    ```
 
 2. Navigate to the project directory:
