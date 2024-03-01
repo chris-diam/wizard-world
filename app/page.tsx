@@ -4,7 +4,7 @@ import House from "@/components/House";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
 import { HouseProps } from "@/components/types";
-const SERVER_URL = process.env.SERVER_URL;
+// const SERVER_URL = process.env.SERVER_URL;
 
 export default function Home() {
   const [houses, setHouses] = useState<HouseProps[]>([]);
@@ -12,12 +12,14 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (!SERVER_URL) {
-        setLoading(false);
-        return;
-      }
+      // if (!SERVER_URL) {
+      //   setLoading(false);
+      //   return;
+      // }
       try {
-        const response = await fetch(SERVER_URL);
+        const response = await fetch(
+          "https://wizard-world-api.cyclic.app/houses"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
