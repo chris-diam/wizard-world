@@ -8,24 +8,28 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone git@github.com:chris-diam/wizard-world.git
-   ```
+```bash
+git clone <repository-url>
+```
 
 2. Navigate to the project directory:
 
-   ```bash
-   cd wizard-world-react-app
-   ```
+```bash
+cd wizard-world
+```
 
 3. Install dependencies:
-   ```bash
-   npm install
-   ```
+
+```bash
+npm install
+```
+
 4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+
+```bash
+npm run dev
+```
+
 5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
 
 ## Deployment
@@ -34,7 +38,10 @@ This application is deployed online using Vercel at [https://wizard-world-ten.ve
 
 ## API
 
-The React.js app fetches data from a backend API. The API URL is defined in the .env.local file as SERVER_URL. By default, it points to a public API endpoint. If you want to use a different API endpoint, you can update the value of SERVER_URL accordingly.
+The React.js app fetches data from a backend API. The API URL is defined in the `.env.local` file as `SERVER_URL`. If you want to use a different API endpoint, follow these steps:
+
+1. Create a `.env.local` file in the root of your project directory.
+2. Add the following line to the `.env.local` file:
 
 ## Technologies Used
 
