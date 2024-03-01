@@ -11,7 +11,7 @@ const House: FunctionComponent<HouseProps> = (props) => {
         className="rounded-lg md:w-[420px] border-2 border-[#e3e3e3] mb-8 h-full  shadow-md"
       >
         <div className="flex justify-between px-4 pt-3 pb-3">
-          <h2 className="text-[22px] font-black">{props.name}</h2>
+          <h2 className="text-[22px] font-bold ">{props.name}</h2>
           <p className="text-[14px]  pt-1 px-2"> {props.animal}</p>
         </div>
 
@@ -42,7 +42,7 @@ const House: FunctionComponent<HouseProps> = (props) => {
 
         <div className="flex px-4  pt-1 pb-4">
           <p>Founder: </p>
-          <p className="font-bold ml-2"> {props.founder}</p>
+          <h3 className="font-bold ml-2"> {props.founder}</h3>
         </div>
       </div>
     </div>

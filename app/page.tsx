@@ -12,6 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log(SERVER_URL);
       if (!SERVER_URL) {
         setLoading(false);
         return;

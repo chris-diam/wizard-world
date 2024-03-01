@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "verdana-bold";
+  src: url("/fonts/verdana-font-family/verdana-bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "verdana";
   src: url("/fonts/verdana-font-family/verdana.ttf");
   font-weight: normal;
@@ -19,6 +25,11 @@
 
 body {
   font-family: "verdana", sans-serif; /* Provide fallback font */
+}
+
+h2,
+h3 {
+  font-family: "verdana-bold";
 }
 
 @media (prefers-color-scheme: dark) {
